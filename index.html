@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>The Chatting Web-app</title>
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+            crossorigin="anonymous"
+        />
+        <script
+            defer
+            src="http://localhost:3000/socket.io/socket.io.js"
+        ></script>
+        <script defer src="./script.js"></script>
+        <style>
+            html,
+            body {
+                background-color: rgb(94, 94, 94);
+                justify-content: center;
+            }
+            .myform {
+                position: fixed;
+                bottom: 0;
+                /* justify-content: center; */
+            }
+            .chat-app {
+                display: flex;
+                justify-content: center;
+                background-color: white;
+                width: 300px;
+                height: 400px;
+                margin: 100px auto;
+                overflow: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="chat-app">
+            <div class="message-container"></div>
+            <form class="form-inline myform">
+                <div class="form-group">
+                    <input
+                        type="text"
+                        class="form-control mb-2 mr-sm-2 type-message"
+                        id="inputText1"
+                        placeholder="Enter Message"
+                        aria-describedby="emailHelp"
+                    />
+                </div>
+                <button
+                    type="submit"
+                    id="send-message"
+                    class="btn btn-primary mb-2"
+                >
+                    Submit
+                </button>
+            </form>
+        </div>
+    </body>
+</html>
