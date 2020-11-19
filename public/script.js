@@ -1,4 +1,4 @@
-const socket = io("http://localhost:3000/");
+const socket = io();
 console.log("hey user");
 const message_container = document.querySelector(".message-container");
 const send_btn = document.querySelector("#send-message");
@@ -11,7 +11,6 @@ let color_class_list = [
     "warning",
     "danger",
     "info",
-    "light",
     "dark",
 ];
 let user_color =
